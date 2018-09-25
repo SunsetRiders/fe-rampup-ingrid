@@ -71,6 +71,16 @@
       margin-bottom: 2px;
       font-size: 12px;
       font-weight: 700;
+
+      > .vacation {
+        max-width: 60px;
+        padding: 5px;
+        border-radius: 10%;
+        background: #e8676b;
+        text-align: center;
+        color: white;
+        font-weight: 400;
+      }
     }
 
     > .item-value {
@@ -89,15 +99,7 @@
       }
     }
 
-    > .vacation {
-      max-width: 60px;
-      padding: 5px;
-      border-radius: 10%;
-      background: #e8676b;
-      text-align: center;
-      color: white;
-      font-weight: 400;
-    }
+
   }
 }
 
