@@ -1,0 +1,199 @@
+.profile {
+  padding: 15px;
+}
+
+.profile-img {
+  display: block;
+  margin: auto;
+  max-width: 400px;
+  min-width: 250px;
+}
+
+.info-header {
+  text-align: center;
+}
+
+.hello {
+  display: inline-block;
+  margin: 10px;
+  position: relative;
+  padding: 5px 10px;
+  background-color: #e8676b;
+  color: white;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.hello::after {
+  content: "";
+  position: absolute;
+  height: 0px;
+  width: 0px;
+  top: 100%;
+  left: 10px;
+  border: 5px solid #e8676b;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.pronoum {
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+
+.name {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 15px;
+}
+
+.job {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.hr-style {
+  border-color: #dedede;
+  margin: 15px 0px;
+  border-bottom: none;
+  border-top: 1px solid #dedede;
+  height: 0px;
+}
+
+.informations-list {
+  list-style-type: none;
+  padding: 0px;
+
+  > .list-item {
+    display: block;
+
+    > .item-key {
+      margin-bottom: 2px;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    > .item-value {
+      margin-bottom: 10px;
+      color: #9da0a7;
+      font-size: 15px;
+      font-weight: 300;
+
+      >.calendar {
+        width: 20px;
+        height: 20px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 110%;
+        background-image: url("../../assets/calendar.svg");
+      }
+    }
+
+    > .vacation {
+      max-width: 60px;
+      padding: 5px;
+      border-radius: 10%;
+      background: #e8676b;
+      text-align: center;
+      color: white;
+      font-weight: 400;
+    }
+  }
+}
+
+.profile-footer {
+  width: 100%;
+  padding: 25px 0px;
+  background-color: #e8676b;
+
+  > .footer-list {
+    max-width: 425px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0px;
+    list-style-type: none;
+    background-color: #e8676b;
+
+    > .list-item {
+      flex: 0 1 40px;
+      margin: auto;
+
+      > .link {
+        display: flex;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-size: 40%;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: background-color 0.3 ease-out;
+      }
+      > .-twitter {
+        background-image: url("../../assets/social/twitter.svg");
+      }
+
+      > .-facebook {
+        background-image: url("../../assets/social/facebook.svg");
+      }
+
+      > .-dribbble {
+        background-image: url("../../assets/social/dribbble.svg");
+      }
+
+      > .-linkedin {
+        background-image: url("../../assets/social/linkedin.svg");
+      }
+
+      > .-instagram {
+        background-image: url("../../assets/social/instagram.svg");
+      }
+
+      > .-plus {
+        background-image: url("../../assets/social/plus.svg");
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 425px) {
+  .informations-list {
+    list-style: none;
+
+    > .list-item {
+      display: flex;
+      max-width: 930px;
+
+      > .item-key {
+        flex: 0 0 150px;
+      }
+
+      > .item-value {
+        flex: 1 0 150px;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .profile {
+    display: flex;
+    max-width: 930px;
+    flex-wrap: nowrap;
+  }
+
+  .profile-img {
+    min-width: 295px;
+    max-width: 295px;
+    margin-right: 15px;
+  }
+
+  .profile-info {
+    width: 930px;
+  }
+
+  .info-header {
+    text-align: left;
+  }
+}
