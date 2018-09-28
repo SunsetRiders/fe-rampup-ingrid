@@ -17,7 +17,6 @@
 
 .list-items {
   list-style: none;
-  margin: 0px 20px;
   padding: 20px 0px;
 
   > .item {
@@ -41,7 +40,6 @@
 
   .item:empty {
     content:'';
-    padding: 1px;
     height: 0px;
     max-width: 355px;
   }
