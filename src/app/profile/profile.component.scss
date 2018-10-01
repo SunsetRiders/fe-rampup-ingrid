@@ -1,5 +1,12 @@
 .profile {
   padding: 15px;
+  margin: 0px;
+  display: block;
+  max-width: 930px;
+  background-color: #fafafa;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  font-family: "Open Sans", sans-serif;
+  color: #3d4451;
 }
 
 .profile-img {
@@ -71,9 +78,10 @@
       margin-bottom: 2px;
       font-size: 12px;
       font-weight: 700;
+      text-transform: uppercase;
 
       > .vacation {
-        max-width: 60px;
+        max-width: 70px;
         padding: 5px;
         border-radius: 10%;
         background: #e8676b;
