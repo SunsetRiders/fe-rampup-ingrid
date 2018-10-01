@@ -6,6 +6,7 @@ import { CardComponent } from './card/card.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DownloadResumeComponent } from './download-resume/download-resume.component';
 import { ProfessionalSkillsComponent } from './professional-skills/professional-skills.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -16,9 +17,10 @@ import { ProfessionalSkillsComponent } from './professional-skills/professional-
     ProfessionalSkillsComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }
