@@ -3,7 +3,7 @@
 </span>
 <div class="box">
 
-  <ul class="list-items">
+  <ul class="list">
     <li class="item" *ngFor="let skillItem of titleSkills"><span class="title-skill">{{ skillItem.name }} - {{ skillItem.percentage }}%</span><div class="row">
         <div class="percentage" [style.width.%]="skillItem.percentage"></div></div>
     </li>
