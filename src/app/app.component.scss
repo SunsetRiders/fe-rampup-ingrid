@@ -2,6 +2,23 @@
   display: block;
 }
 
+.logo {
+  color: #9a9da2;
+  font-weight: 700;
+  font-size: 30px;
+  transition: all 0.2s ease-out;
+  //cursor: pointer;
+
+  > span {
+    color: #e8676b;
+    text-transform: uppercase;
+  }
+}
+
+.nav-bar {
+  color: green;
+}
+
 nav a {
   display: inline-block;
   position: static;
@@ -9,16 +26,12 @@ nav a {
   margin: 10px 0;
   padding: 5px 10px;
   text-decoration: none;
-  background-color: #eee;
-  border-radius: 4px;
-
   color: rgba(255, 255, 255, 0.7);
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
   line-height: 1;
-  display: block;
-  padding: 12px 0;
+  border-radius: 4px;
 
 }
 nav a:visited,
@@ -28,13 +41,15 @@ a:link {
 nav a:hover {
   color: #039be5;
   background-color: #cfd8dc;
-
   cursor: pointer;
   word-break: break-word;
   word-wrap: break-word;
-  //transform: ;
 
 }
 nav a.active {
   color: #039be5;
+}
+
+hr {
+  margin: 20px 0;
 }
