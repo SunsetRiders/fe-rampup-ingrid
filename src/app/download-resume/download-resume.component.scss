@@ -1,3 +1,7 @@
+:host {
+  display: block;
+}
+
 .button-div {
   display: flex;
 }
@@ -15,6 +19,7 @@
   font-size: 15px;
   font-weight: 700;
   transition: all 0.3s ease-out;
+  cursor: pointer;
 }
 
 .description {

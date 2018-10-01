@@ -1,6 +1,10 @@
+:host {
+  display: block;
+}
+
 .profile {
   padding: 15px;
-  margin: 0px;
+  margin: 0px auto;
   display: block;
   max-width: 930px;
   background-color: #fafafa;
@@ -27,6 +31,7 @@
   padding: 5px 10px;
   background-color: #e8676b;
   color: white;
+  text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
 }
@@ -73,9 +78,9 @@
 
   > .list-item {
     display: block;
+    margin-bottom: 2px;
 
     > .item-key {
-      margin-bottom: 2px;
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
@@ -113,6 +118,8 @@
 
 .profile-footer {
   width: 100%;
+  max-width: 930px;
+  margin: auto;
   padding: 25px 0px;
   background-color: #e8676b;
 
@@ -139,7 +146,14 @@
         background-repeat: no-repeat;
         background-position: center;
         transition: background-color 0.3 ease-out;
+        cursor: pointer;
+        text-decoration: underline;
       }
+
+      > .link:hover {
+        background-color: #e55155;
+      }
+
       > .-twitter {
         background-image: url("../../assets/social/twitter.svg");
       }
