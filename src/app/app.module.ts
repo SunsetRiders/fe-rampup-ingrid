@@ -7,6 +7,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { DownloadResumeComponent } from './download-resume/download-resume.component';
 import { ProfessionalSkillsComponent } from './professional-skills/professional-skills.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ContactMeComponent } from './contact-me/contact-me.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
     ProfileComponent,
     DownloadResumeComponent,
     ProfessionalSkillsComponent,
+    ContactMeComponent,
   ],
   imports: [
     BrowserModule,
