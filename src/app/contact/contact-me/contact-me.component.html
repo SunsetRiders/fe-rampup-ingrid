@@ -1,5 +1,22 @@
-<span>Contact Us</span>
-<div>
-  <div class="register"></div>
-  <div class="list"></div>
+<span class="title">Contact Us</span>
+<div class="info">
+  <div class="box">
+    <span>Feel free to contact me</span>
+    <form class="form-input">
+      <input class="input-field" type="text" name="name">  <br>
+      <input class="input-field" type="text" name="email">
+      <input class="input-field" type="text" name="sbject">
+      <input class="input-field" type="text" name="message">
+    </form>
+
+  </div>
+  <div class="box">
+    <ul class="list">
+      <li *ngFor="let info of info" class="item"><span class="key">{{ info.name }}</span><span class="value">{{ info.content }}</span></li>
+    </ul>
+  </div>
 </div>
+<div>
+  <button></button>
+</div>
+<div class="footer"></div>
