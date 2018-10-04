@@ -1,52 +1,52 @@
 .info-header {
   text-align: center;
-}
 
+  > .hello {
+    display: inline-block;
+    margin: 10px;
+    position: relative;
+    padding: 5px 10px;
+    background-color: #e8676b;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 700;
+  }
 
-.hello {
-  display: inline-block;
-  margin: 10px;
-  position: relative;
-  padding: 5px 10px;
-  background-color: #e8676b;
-  color: white;
-  text-transform: uppercase;
-  font-size: 14px;
-  font-weight: 700;
-}
+  > .hello::after {
+    content: "";
+    position: absolute;
+    height: 0px;
+    width: 0px;
+    top: 100%;
+    left: 10px;
+    border: 5px solid #e8676b;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+  }
 
-.hello::after {
-  content: "";
-  position: absolute;
-  height: 0px;
-  width: 0px;
-  top: 100%;
-  left: 10px;
-  border: 5px solid #e8676b;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-}
+  > .pronoum {
+    margin-bottom: 5px;
+    font-weight: 300;
 
-.pronoum {
-  margin-bottom: 5px;
-  font-weight: 300;
-}
+    > .name {
+      font-size: 28px;
+      font-weight: 700;
+      margin-top: 15px;
+    }
+  }
 
-.name {
-  font-size: 28px;
-  font-weight: 700;
-  margin-top: 15px;
-}
+  > .job {
+    font-size: 18px;
+    font-weight: 400;
+  }
 
-.job {
-  font-size: 18px;
-  font-weight: 400;
-}
+  > .hr-style {
+    border-color: #dedede;
+    margin: 15px 0px;
+    border-bottom: none;
+    border-top: 1px solid #dedede;
+    height: 0px;
+  }
 
-.hr-style {
-  border-color: #dedede;
-  margin: 15px 0px;
-  border-bottom: none;
-  border-top: 1px solid #dedede;
-  height: 0px;
 }

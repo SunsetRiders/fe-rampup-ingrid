@@ -1,5 +1,7 @@
 .list {
-  list-style-type: none;
+  list-style: none;
+  display: block;
+  margin: auto;
   padding: 0px;
 
   > .list-item {
@@ -38,7 +40,24 @@
         background-image: url("../../assets/calendar.svg");
       }
     }
+  }
+}
 
+@media only screen and (min-width: 425px) {
+  .list {
+    list-style: none;
 
+    > .list-item {
+      display: flex;
+      max-width: 930px;
+
+      > .item-key {
+        flex: 0 0 150px;
+      }
+
+      > .item-value {
+        flex: 1 0 150px;
+      }
+    }
   }
 }

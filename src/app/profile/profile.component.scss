@@ -1,12 +1,12 @@
+@import './profile-data.scss';
 @import './info-header.scss';
+@import './data-info.scss';
+@import './profile-footer';
 @import './info-list.scss';
 
-:host {
-  display: block;
-}
 
-.profile {
-  padding: 15px;
+:host {
+  padding: 15px 0 0;
   margin: 0px auto;
   display: block;
   max-width: 930px;
@@ -16,111 +16,18 @@
   color: #3d4451;
 }
 
-.image {
-  display: block;
-  margin: auto;
-  max-width: 400px;
-  min-width: 250px;
-}
-
-.footer {
-  width: 100%;
-  max-width: 930px;
-  margin: auto;
-  padding: 25px 0px;
-  background-color: #e8676b;
-
-  > .footer-list {
-    max-width: 425px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 0px;
-    list-style-type: none;
-    background-color: #e8676b;
-
-    > .list-item {
-      flex: 0 1 40px;
-      margin: auto;
-
-      > .link {
-        display: flex;
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
-        background-size: 40%;
-        background-repeat: no-repeat;
-        background-position: center;
-        transition: background-color 0.3 ease-out;
-        cursor: pointer;
-        text-decoration: underline;
-      }
-
-      > .link:hover {
-        background-color: #e55155;
-      }
-
-      > .-twitter {
-        background-image: url("../../assets/social/twitter.svg");
-      }
-
-      > .-facebook {
-        background-image: url("../../assets/social/facebook.svg");
-      }
-
-      > .-dribbble {
-        background-image: url("../../assets/social/dribbble.svg");
-      }
-
-      > .-linkedin {
-        background-image: url("../../assets/social/linkedin.svg");
-      }
-
-      > .-instagram {
-        background-image: url("../../assets/social/instagram.svg");
-      }
-
-      > .-plus {
-        background-image: url("../../assets/social/plus.svg");
-      }
-    }
-  }
-}
-
-@media only screen and (min-width: 425px) {
-  .informations-list {
-    list-style: none;
-
-    > .list-item {
-      display: flex;
-      max-width: 930px;
-
-      > .item-key {
-        flex: 0 0 150px;
-      }
-
-      > .item-value {
-        flex: 1 0 150px;
-      }
-    }
-  }
-}
 
 @media only screen and (min-width: 768px) {
-  .profile {
+  .profile-data {
     display: flex;
-    max-width: 930px;
-    flex-wrap: nowrap;
   }
 
-  .profile-img {
-    min-width: 295px;
-    max-width: 295px;
+  .data-imgage {
+    width: 295px;
     margin-right: 15px;
   }
 
-  .profile-info {
+  .data-info {
     width: 930px;
   }
 
