@@ -1,12 +1,11 @@
-@import './profile-data.scss';
+@import './data-image.scss';
 @import './info-header.scss';
-@import './data-info.scss';
-@import './profile-footer';
+@import './footer-list';
 @import './info-list.scss';
+@import './profile-data.scss';
 
 
 :host {
-  padding: 15px 0 0;
   margin: 0px auto;
   display: block;
   max-width: 930px;
@@ -16,22 +15,3 @@
   color: #3d4451;
 }
 
-
-@media only screen and (min-width: 768px) {
-  .profile-data {
-    display: flex;
-  }
-
-  .data-imgage {
-    width: 295px;
-    margin-right: 15px;
-  }
-
-  .data-info {
-    width: 930px;
-  }
-
-  .info-header {
-    text-align: left;
-  }
-}

@@ -1,14 +1,14 @@
-.list {
+.info-list {
   list-style: none;
   display: block;
   margin: auto;
   padding: 0px;
 
-  > .list-item {
+  > .item {
     display: block;
     margin-bottom: 2px;
 
-    > .item-key {
+    > .key {
       font-size: 12px;
       font-weight: 700;
       text-transform: uppercase;
@@ -25,13 +25,13 @@
       }
     }
 
-    > .item-value {
+    > .value {
       margin-bottom: 10px;
       color: #9da0a7;
       font-size: 15px;
       font-weight: 300;
 
-      >.calendar {
+      > .calendar {
         width: 20px;
         height: 20px;
         background-repeat: no-repeat;
@@ -41,21 +41,18 @@
       }
     }
   }
-}
 
-@media only screen and (min-width: 425px) {
-  .list {
+  @media only screen and (min-width: 425px) {
     list-style: none;
 
-    > .list-item {
+    > .item {
       display: flex;
-      max-width: 930px;
 
-      > .item-key {
+      > .key {
         flex: 0 0 150px;
       }
 
-      > .item-value {
+      > .value {
         flex: 1 0 150px;
       }
     }

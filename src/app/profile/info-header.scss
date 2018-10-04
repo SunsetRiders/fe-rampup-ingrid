@@ -3,7 +3,7 @@
 
   > .hello {
     display: inline-block;
-    margin: 10px;
+    margin-bottom: 10px;
     position: relative;
     padding: 5px 10px;
     background-color: #e8676b;
@@ -41,7 +41,7 @@
     font-weight: 400;
   }
 
-  > .hr-style {
+  > .hr {
     border-color: #dedede;
     margin: 15px 0px;
     border-bottom: none;
@@ -49,4 +49,7 @@
     height: 0px;
   }
 
+  @media only screen and (min-width: 768px) {
+    text-align: left;
+  }
 }
