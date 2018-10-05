@@ -7,39 +7,39 @@
   > .item {
     display: block;
     margin-bottom: 2px;
+  }
 
-    > .key {
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
+  > .item > .key {
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
 
-      > .vacation {
-        max-width: 70px;
-        margin-bottom: 5px;
-        padding: 5px;
-        border-radius: 10%;
-        background: #e8676b;
-        text-align: center;
-        color: white;
-        font-weight: 400;
-      }
-    }
+  > .item > .key > .vacation {
+    max-width: 70px;
+    margin-bottom: 5px;
+    padding: 5px;
+    border-radius: 10%;
+    background: #e8676b;
+    text-align: center;
+    color: white;
+    font-weight: 400;
+  }
 
-    > .value {
-      margin-bottom: 10px;
-      color: #9da0a7;
-      font-size: 15px;
-      font-weight: 300;
+  > .item > .value {
+    margin-bottom: 10px;
+    color: #9da0a7;
+    font-size: 15px;
+    font-weight: 300;
+  }
 
-      > .calendar {
-        width: 20px;
-        height: 20px;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 110%;
-        background-image: url("../../assets/calendar.svg");
-      }
-    }
+  > .item > .value > .calendar {
+    width: 20px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 110%;
+    background-image: url("../../assets/calendar.svg");
   }
 
   @media only screen and (min-width: 425px) {

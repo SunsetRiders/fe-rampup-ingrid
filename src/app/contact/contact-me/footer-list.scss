@@ -1,0 +1,55 @@
+.footer-list {
+  padding: 25px 0px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  background-color: black;
+
+  > .item {
+    flex: 0 0 40px;
+    margin: 10px;
+
+    > .link {
+      display: flex;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-size: 40%;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: background-color 0.3 ease-out;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    > .link:hover {
+      background-color: #e55155;
+    }
+
+    > .-twitter {
+      background-image: url("../../../assets/social/twitter.svg");
+    }
+
+    > .-facebook {
+      background-image: url("../../../assets/social/facebook.svg");
+    }
+
+    > .-dribbble {
+      background-image: url("../../../assets/social/dribbble.svg");
+    }
+
+    > .-linkedin {
+      background-image: url("../../../assets/social/linkedin.svg");
+    }
+
+    > .-instagram {
+      background-image: url("../../../assets/social/instagram.svg");
+    }
+
+    > .-plus {
+      background-image: url("../../../assets/social/plus.svg");
+    }
+  }
+}

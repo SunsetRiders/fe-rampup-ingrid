@@ -1,0 +1,38 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: 60px;
+
+  > .label {
+    order: 1;
+    line-height: 20px;
+    font-size: 15px;
+    color: gray;
+    transform: translate3d(10px, 30px, 0);
+    transition: all 0.3s ease-out;
+    pointer-events: none;
+
+  }
+
+  > .input {
+    order: 2;
+    display: block;
+    width: 100%;
+    min-height: 40px;
+    border: none;
+    border-bottom: 1px solid gray;
+    transition: border-bottom 0.3s ease-in-out;
+    outline: none;
+    cursor: text;
+  }
+
+  > .input:focus {
+    border-bottom: 5px solid #e8676b;
+  }
+
+  .input:focus + .label {
+    color: #e8676b;
+    transform: translate3d(0, 0, 0);
+  }
+}

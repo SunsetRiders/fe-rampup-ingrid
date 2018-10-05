@@ -1,13 +1,15 @@
 @import './contact-info.scss';
+@import './footer-list.scss';
+@import './input-container.scss';
+@import './first-box.scss';
+@import './second-box.scss';
 
 :host {
   display: block;
-  font-family: "Open Sans", sans-serif;
-  color: #3d4451;
 
   > .title {
     display: block;
-    margin: 0 auto;
+    margin: 10px auto;
     padding: 10px;
     font-size: 30px;
     line-height: 1.2;
@@ -16,7 +18,18 @@
   }
 
   > button {
-    color: green;
+    display: block;
+    margin: 20px auto;
+    padding: 21px 55px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 3px;
+    color: #3d4451;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    transition: all 0.3s ease-out;
     cursor: pointer;
   }
 }
