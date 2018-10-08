@@ -6,11 +6,12 @@
 
 :host {
   display: block;
+  margin: auto;
+  max-width: 930px;
 
   > .title {
     display: block;
-    margin: 10px auto;
-    padding: 10px;
+    margin-bottom: 10px;
     font-size: 30px;
     line-height: 1.2;
     font-weight: 600;
