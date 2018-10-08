@@ -5,7 +5,7 @@
   flex-wrap: wrap;
   justify-content: center;
   list-style-type: none;
-  background-color: black;
+  background-color: transparent;
 
   > .item {
     flex: 0 0 40px;
@@ -13,10 +13,10 @@
 
     > .link {
       display: flex;
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
       border-radius: 50%;
-      background-size: 40%;
+      background-size: 50%;
       background-repeat: no-repeat;
       background-position: center;
       transition: background-color 0.3 ease-out;
@@ -25,31 +25,31 @@
     }
 
     > .link:hover {
-      background-color: #e55155;
+      background-color: #e0e0e0;
     }
 
     > .-twitter {
-      background-image: url("../../../assets/social/twitter.svg");
+      background-image: url("../../../assets/social-contact/twitter.svg");
     }
 
     > .-facebook {
-      background-image: url("../../../assets/social/facebook.svg");
+      background-image: url("../../../assets/social-contact/facebook.svg");
     }
 
     > .-dribbble {
-      background-image: url("../../../assets/social/dribbble.svg");
+      background-image: url("../../../assets/social-contact/dribbble.svg");
     }
 
     > .-linkedin {
-      background-image: url("../../../assets/social/linkedin.svg");
+      background-image: url("../../../assets/social-contact/linkedin.svg");
     }
 
     > .-instagram {
-      background-image: url("../../../assets/social/instagram.svg");
+      background-image: url("../../../assets/social-contact/instagram.svg");
     }
 
     > .-plus {
-      background-image: url("../../../assets/social/plus.svg");
+      background-image: url("../../../assets/social-contact/plus.svg");
     }
   }
 }
