@@ -1,0 +1,17 @@
+@import './data-image.scss';
+@import './info-header.scss';
+@import './footer-list';
+@import './info-list.scss';
+@import './profile-data.scss';
+
+
+:host {
+  margin: 0px auto;
+  display: block;
+  max-width: 930px;
+  background-color: #fafafa;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+  font-family: "Open Sans", sans-serif;
+  color: #3d4451;
+}
+

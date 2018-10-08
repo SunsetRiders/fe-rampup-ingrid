@@ -1,0 +1,42 @@
+.second-box {
+  margin: 10px;
+
+  > .list {
+    list-style: none;
+    padding: 0px;
+  }
+
+  .list > .item {
+    display: flex;
+  }
+
+  > .list > .item + .item {
+    margin-top: 20px;
+  }
+
+  .list > .item > .key {
+    text-transform: uppercase;
+    font-size: 13px;
+    flex: 0 0 70px;
+  }
+
+  .list > .item > .value {
+    font-size: 13px;
+  }
+  @media only screen and (min-width: 768px) {
+    flex: 1 0 150px;
+
+    .list > .item {
+      display: flex;
+      flex-wrap: wrap;
+
+      > .key {
+        flex: 0 0 80px;
+      }
+
+      > .value {
+        flex: 1 0 50px;
+      }
+    }
+  }
+}

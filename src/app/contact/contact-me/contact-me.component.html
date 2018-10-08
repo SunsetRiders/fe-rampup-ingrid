@@ -1,0 +1,51 @@
+<span class="title">Contact Us</span>
+
+<div class="contact-info">
+  <div class="box first-box">
+
+    <span>Feel free to contact me</span>
+
+    <form class="form">
+      <div class="input-container inputcontainer">
+        <input class="input" type="text" name="name">
+        <label class="label">Name</label>
+      </div>
+      <div class="input-container inputcontainer">
+        <input class="input" type="text" name="email">
+        <label class="label">E-mail</label>
+      </div>
+      <div class="input-container inputcontainer">
+        <input class="input" type="text" name="sbject">
+        <label class="label">Subject</label>
+      </div>
+      <div class="input-container inputcontainer">
+        <input class="input" type="text" name="message">
+        <label class="label">Message</label>
+      </div>
+      <div class="input-container -checkbox">
+        <input class="input" type="checkbox">
+        <span class="span">I have read the Privacy Policy note.</span>
+      </div>
+
+    </form>
+
+    <button>Send</button>
+
+  </div>
+  <div class="box second-box">
+    <ul class="list">
+      <li *ngFor="let info of info" class="item"><span class="key">{{ info.name }}</span><span class="value">{{ info.content }}</span></li>
+    </ul>
+  </div>
+</div>
+
+<button>Buy WordPress Version</button>
+
+<ul class="footer-list">
+  <li class="item"><a class="link -twitter" href="https://www.twitter.com/" target="_blank"></a></li>
+  <li class="item"><a class="link -facebook" href="https://www.facebook.com/" target="_blank"></a></li>
+  <li class="item"><a class="link -dribbble" href="https://www.dribbble.com/" target="_blank"></a></li>
+  <li class="item"><a class="link -linkedin" href="https://www.linkedin.com/" target="_blank"></a></li>
+  <li class="item"><a class="link -instagram" href="https://www.instagram.com/" target="_blank"></a></li>
+  <li class="item"><a class="link -plus" href="https://plus.google.com/discover" target="_blank"></a></li>
+</ul>

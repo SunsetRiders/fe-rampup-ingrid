@@ -1,0 +1,22 @@
+.profile-data {
+  padding: 40px;
+
+  > .secondcolumn {
+    margin-top: 20px;
+  }
+
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+
+    > .firstcolumn {
+      flex: 1 0 100px;
+    }
+
+    > .secondcolumn {
+      flex: 1 1 400px;
+      margin-top: 0;
+      margin-left: 40px;
+    }
+  }
+}

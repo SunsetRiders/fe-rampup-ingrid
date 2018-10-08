@@ -1,0 +1,55 @@
+.footer-list {
+  padding: 25px 0px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  background-color: transparent;
+
+  > .item {
+    flex: 0 0 40px;
+    margin: 10px;
+
+    > .link {
+      display: flex;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background-size: 50%;
+      background-repeat: no-repeat;
+      background-position: center;
+      transition: background-color 0.3 ease-out;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+
+    > .link:hover {
+      background-color: #e0e0e0;
+    }
+
+    > .-twitter {
+      background-image: url("../../../assets/social-contact/twitter.svg");
+    }
+
+    > .-facebook {
+      background-image: url("../../../assets/social-contact/facebook.svg");
+    }
+
+    > .-dribbble {
+      background-image: url("../../../assets/social-contact/dribbble.svg");
+    }
+
+    > .-linkedin {
+      background-image: url("../../../assets/social-contact/linkedin.svg");
+    }
+
+    > .-instagram {
+      background-image: url("../../../assets/social-contact/instagram.svg");
+    }
+
+    > .-plus {
+      background-image: url("../../../assets/social-contact/plus.svg");
+    }
+  }
+}

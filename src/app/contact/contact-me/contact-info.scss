@@ -1,0 +1,17 @@
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 930px;
+  margin: -20px;
+
+  > .box {
+    padding: 40px 50px;
+    margin: 20px;
+    display: block;
+    flex: 1 1 250px;
+    background-color: #fafafa;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.24);
+    font-family: "Open Sans", sans-serif;
+    color: #3d4451;
+  }
+}
