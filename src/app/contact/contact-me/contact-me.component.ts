@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProfileService } from '../../core/profile.service';
 
 @Component({
   selector: 'app-contact-me',
@@ -6,12 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./contact-me.component.scss']
 })
 export class ContactMeComponent implements OnInit {
-  info = [ {name: 'E-mail', content: 'robertsmith@company.com' },
-                        {name: 'Phone', content: '+1 256 243 84 56'},
-                        {name: 'Viber', content: '+1 256 243 84 56'},
-                        {name: 'Skype', content: 'robsmithcompany'},
-                        {name: 'Adress', content: '24058, Belgium, Brussels, Liutte 27, BE'}];
-  constructor() { }
+  info = [ ];
+
+  constructor(profileService: ProfileService) {
+    this.info = profileService.userInfo;
+    console.log(this.info);
+   }
 
   ngOnInit() {
   }
