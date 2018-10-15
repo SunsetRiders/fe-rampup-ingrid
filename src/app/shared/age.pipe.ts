@@ -1,35 +1,21 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { ProfileService } from '../core/profile.service';
-import { AgeComponent } from '../shared/age/age.component';
 
 @Pipe({ name: 'age' })
 export class AgePipe implements PipeTransform {
-  transform(info: string): string {
-    const age = 'oi';
-    /*  if (e.name === 'brithday') {
-        const user = e.value;
-        calculateAge(user.day, e.month, e.year);
-      } */
-    console.log('oi');
-    return 'oi';
+
+  transform(birtday: string): number {
+    return this.calculateAge(birtday);
   }
 
-  calculateAge(userDay: number, userMonth: number, userYear: number) {
-    const today = new Date();
-    const currentDay = today.getDate();
-    const currentMonth = today.getMonth();
-    const currentYear = today.getFullYear();
+  calculateAge(birthday: string): number {
     let age;
+    const date = new Date(birthday);
+    const today = new Date();
 
-    if (userMonth - currentMonth < 0) {
-      age = currentYear - userYear - 1;
-    } else {
-      if (userDay - currentDay < 0) {
-        age = currentYear - userYear - 1;
-      } else {
-        age = currentYear - userYear;
-      }
-    }
+    age = (today.getTime() - date.getTime()) / 1000;
+    age /= (60 * 60 * 24);
+    age = Math.abs(Math.round(age / 365.25));
+
     return age;
   }
 }

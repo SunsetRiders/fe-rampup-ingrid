@@ -35,6 +35,9 @@
   <div class="box second-box">
     <ul class="list">
       <li *ngFor="let info of info" class="item"><span class="key">{{ info.name }}</span><span class="value">{{ info.content }}</span></li>
+      <li *ngFor="let info of info | age" class="item"><span class="key">{{ info.name }}</span><span class="value">{{ info.content }}</span></li>
+
+      <div> Age: {{ '1996-12-21T02:00:00.000Z' | age }}  </div>
     </ul>
   </div>
 </div>
@@ -49,3 +52,4 @@
   <li class="item"><a class="link -instagram" href="https://www.instagram.com/" target="_blank"></a></li>
   <li class="item"><a class="link -plus" href="https://plus.google.com/discover" target="_blank"></a></li>
 </ul>
+

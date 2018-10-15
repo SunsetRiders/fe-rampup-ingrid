@@ -4,7 +4,7 @@ import { AgePipe } from './age.pipe';
 
 @NgModule({
   imports: [ CommonModule ],
-  declarations: [AgePipe ],
+  declarations: [ AgePipe ],
   exports: [ AgePipe ]
 })
 

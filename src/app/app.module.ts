@@ -9,7 +9,6 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +19,7 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     AboutModule,
     CoreModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [],
   bootstrap: [ AppComponent ]

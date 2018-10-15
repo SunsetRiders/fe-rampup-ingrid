@@ -4,8 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ProfileService {
-  private birthday = new Date('21/12/1996');
-  private info = [{name: 'E-mail', content: 'robertsmith@company.com' }, //{name: 'brithday', content: this.birthday.toISOString()},
+  private info = [{name: 'E-mail', content: 'robertsmith@company.com' },
+                  {name: 'Brithday', content: '1996-12-21T02:00:00.000Z'},
                   {name: 'Phone', content: '+1 256 243 84 56'},
                   {name: 'Viber', content: '+1 256 243 84 56'},
                   {name: 'Skype', content: 'robsmithcompany'},
