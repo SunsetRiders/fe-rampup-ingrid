@@ -34,10 +34,12 @@
   </div>
   <div class="box second-box">
     <ul class="list">
+      <li class="item"><span class="key">AGE:</span><span class="value">{{ birthday | age }}</span></li>
       <li *ngFor="let info of info" class="item"><span class="key">{{ info.name }}</span><span class="value">{{ info.content }}</span></li>
-      <li *ngFor="let info of info | age" class="item"><span class="key">{{ info.name }}</span><span class="value">{{ info.content }}</span></li>
 
-      <div> Age: {{ '1996-12-21T02:00:00.000Z' | age }}  </div>
+      <li *ngFor="let teste of teste " class="item"><span class="key">{{ teste.hasOwnProperty }}</span><span class="value">{{ teste.birthday | age}}</span></li>
+
+      <div> Age: {{ birthday | age }}  </div>
     </ul>
   </div>
 </div>
