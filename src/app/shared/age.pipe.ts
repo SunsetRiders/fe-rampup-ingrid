@@ -3,8 +3,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 @Pipe({ name: 'age' })
 export class AgePipe implements PipeTransform {
 
-  transform(birtday: string): number {
-    return this.calculateAge(birtday);
+  transform(birthday: string): number {
+    return this.calculateAge(birthday);
   }
 
   calculateAge(birthday: string): number {
