@@ -4,4 +4,5 @@ export interface ProfileInfo {
   name: string;
   content: string;
   type: ProfileInfoType;
+  highlight: boolean;
 }

@@ -18,4 +18,8 @@ export class ProfileComponent {
    isInfoAge(info: ProfileInfo) {
      return info.type === ProfileInfoType.Age;
    }
+
+   isInfoCalendar(info: ProfileInfo) {
+    return info.type === ProfileInfoType.Calendar;
+  }
 }

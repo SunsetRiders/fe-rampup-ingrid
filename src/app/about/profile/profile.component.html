@@ -10,13 +10,7 @@
       <hr class="hr">
     </div>
     <ul class="info-list">
-      <li *ngFor="let info of info" class="item"><span class="key">{{ info.name==='Birthday' ? 'AGE:' : info.name }}</span><span class="value">{{ isInfoAge(info) ? (info.content | age) : info.content }}</span></li>
-      <li class="item">
-        <div class="key">
-          <p class="vacation">Vacation</p>
-        </div>
-        <p class="value"><img class="calendar" href="">till March 25,2018</p>
-      </li>
+      <li *ngFor="let info of info" class="item"><div class="key"><p [class.-highlight]="info.highlight">{{ isInfoAge(info) ? 'AGE:' : info.name }}</p></div><span class="value"><img [class.calendar]="isInfoCalendar(info)">{{ isInfoAge(info) ? (info.content | age) : info.content }}</span></li>
     </ul>
   </div>
 </div>
