@@ -7,11 +7,4 @@ import { AgePipe } from './age.pipe';
   declarations: [ AgePipe ],
   exports: [ AgePipe ]
 })
-
-@Injectable({
-  providedIn: 'root'
-})
-export class SharedModule {
-  age = new Date();
-
-}
+export class SharedModule { }

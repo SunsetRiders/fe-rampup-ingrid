@@ -4,10 +4,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class AgePipe implements PipeTransform {
 
   transform(birthday: string): number {
-    return this.calculateAge(birthday);
-  }
-
-  calculateAge(birthday: string): number {
     let age;
     const date = new Date(birthday);
     const today = new Date();
