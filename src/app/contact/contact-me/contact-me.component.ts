@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ProfileInfo } from 'src/app/core/services/profile/profile-info';
 import { ProfileService } from '../../core/services/profile/profile.service';
 import { ProfileInfoType } from 'src/app/core/services/profile/profile-info-type';
+import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+
 
 @Component({
   selector: 'app-contact-me',
@@ -9,13 +11,24 @@ import { ProfileInfoType } from 'src/app/core/services/profile/profile-info-type
   styleUrls: ['./contact-me.component.scss']
 })
 export class ContactMeComponent {
+  contactForm = this.fb.group({
+    name: [''],
+    email: [''],
+    subject: [''],
+    message: ['']
+  });
+
   info: ProfileInfo[] = [];
 
-  constructor(profileService: ProfileService) {
+  constructor(profileService: ProfileService, private fb: FormBuilder) {
     this.info = profileService.userInfo;
    }
 
    isInfoAge(info: ProfileInfo) {
      return info.type === ProfileInfoType.Age;
+   }
+
+   onSubmit() {
+     console.log(this.contactForm.value);
    }
 }
