@@ -14,7 +14,7 @@ import { Validators } from '@angular/forms';
 export class ContactMeComponent {
   contactForm = this.fb.group({
     name: ['', Validators.required],
-    email: [''],
+    email: ['', Validators.required],
     subject: [''],
     message: ['']
   });
