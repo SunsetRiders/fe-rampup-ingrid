@@ -15,8 +15,8 @@ export class ContactMeComponent {
   contactForm = this.fb.group({
     name: ['', Validators.required],
     email: ['', Validators.required],
-    subject: [''],
-    message: ['']
+    subject: ['', Validators.required],
+    message: ['', Validators.required]
   });
 
   info: ProfileInfo[] = [];

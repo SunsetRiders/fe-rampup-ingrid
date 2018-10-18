@@ -14,7 +14,7 @@
     pointer-events: none;
   }
 
-  > .input {
+  > .input:empty {
     order: 2;
     display: block;
     width: 100%;
@@ -33,6 +33,11 @@
   .input:focus + .label {
     color: #e8676b;
     transform: translate3d(0, 0, 0);
+  }
+
+  > .input:valid + .label {
+    color: #e8676b;
+    transform: translate3d(0,0,0);
   }
 
   &.-checkbox {
