@@ -7,22 +7,22 @@
 
     <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
       <div class="input-container inputcontainer">
-        <input class="input" type="text" formControlName="name" name="name">
+        <input class="input" type="text" formControlName="name" required>
         <label class="label">Name</label>
       </div>
 
       <div class="input-container inputcontainer">
-        <input class="input" type="text" formControlName="email" name="email">
+        <input class="input" type="text" formControlName="email">
         <label class="label" >E-mail</label>
       </div>
 
       <div class="input-container inputcontainer">
-        <input class="input" type="text" formControlName="subject" name="subject">
+        <input class="input" type="text" formControlName="subject">
         <label class="label">Subject</label>
       </div>
 
       <div class="input-container inputcontainer">
-        <input class="input" type="text" formControlName="message" name="message">
+        <input class="input" type="text" formControlName="message">
         <label class="label">Message</label>
       </div>
 
@@ -34,8 +34,9 @@
     </form>
 
     <p> Form Value: {{ contactForm.value | json }}</p>
+    <p>Form Status: {{ contactForm.status }}</p>
 
-    <button>Send</button>
+    <button onclick="">Send</button>
 
   </div>
   <div class="box second-box">

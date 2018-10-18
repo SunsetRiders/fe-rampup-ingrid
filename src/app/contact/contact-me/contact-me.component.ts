@@ -3,6 +3,7 @@ import { ProfileInfo } from 'src/app/core/services/profile/profile-info';
 import { ProfileService } from '../../core/services/profile/profile.service';
 import { ProfileInfoType } from 'src/app/core/services/profile/profile-info-type';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
+import { Validators } from '@angular/forms';
 
 
 @Component({
@@ -12,7 +13,7 @@ import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 })
 export class ContactMeComponent {
   contactForm = this.fb.group({
-    name: [''],
+    name: ['', Validators.required],
     email: [''],
     subject: [''],
     message: ['']
@@ -30,5 +31,9 @@ export class ContactMeComponent {
 
    onSubmit() {
      console.log(this.contactForm.value);
+   }
+
+   onClick() {
+    console.log(this.contactForm.value);
    }
 }
