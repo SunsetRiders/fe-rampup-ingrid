@@ -33,7 +33,7 @@ export class ContactMeComponent {
      console.log(this.contactForm.value);
    }
 
-   onClick() {
+   showFormValue() {
     console.log(this.contactForm.value);
    }
 }

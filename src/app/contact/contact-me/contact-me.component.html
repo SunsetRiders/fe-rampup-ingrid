@@ -36,7 +36,7 @@
     <p> Form Value: {{ contactForm.value | json }}</p>
     <p>Form Status: {{ contactForm.status }}</p>
 
-    <button onclick="">Send</button>
+    <button (click)="showFormValue()">Send</button>
 
   </div>
   <div class="box second-box">
