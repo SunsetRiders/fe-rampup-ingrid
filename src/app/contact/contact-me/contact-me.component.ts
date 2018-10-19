@@ -4,6 +4,7 @@ import { ProfileService } from '../../core/services/profile/profile.service';
 import { ProfileInfoType } from 'src/app/core/services/profile/profile-info-type';
 import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
 import { Validators } from '@angular/forms';
+import { ContactMeService } from '../../shared/services/contact-me-form/contact-me.service';
 
 
 @Component({
@@ -20,6 +21,7 @@ export class ContactMeComponent {
   });
 
   info: ProfileInfo[] = [];
+  contactMeService: ContactMeService;
 
   constructor(profileService: ProfileService, private fb: FormBuilder) {
     this.info = profileService.userInfo;
@@ -30,7 +32,7 @@ export class ContactMeComponent {
    }
 
    onSubmit() {
-     console.log(this.contactForm.value);
+    this.contactMeService.formValue(this.contactForm.value);
    }
 
    showFormValue() {
