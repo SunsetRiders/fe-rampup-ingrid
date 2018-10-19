@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AboutComponent } from './about/about/about.component';
-import { AuthGuardService } from './guards/auth-guard.service';
+import { AuthGuardService } from './guards/auth-guard/auth-guard.service';
+import { AuthGuardChildService } from './guards/auth-guard-child/auth-guard-child.service';
+import { AuthGuardLoadService } from './guards/auth-guard-load/auth-guard-load.service';
 
 const routes: Routes = [
-  { path: 'skill', loadChildren: './skill/skill.module#SkillModule'},
-  { path: 'contact', loadChildren: './contact/contact.module#ContactModule', canActivate: [AuthGuardService]},
+  { path: 'skill', loadChildren: './skill/skill.module#SkillModule', canLoad: [AuthGuardLoadService]},
+  { path: 'contact', loadChildren: './contact/contact.module#ContactModule', canActivateChild: [AuthGuardChildService]},
   { path: '', redirectTo: '/about', pathMatch: 'full' },
   { path: 'about', component: AboutComponent, canActivate: [AuthGuardService] }
 ];

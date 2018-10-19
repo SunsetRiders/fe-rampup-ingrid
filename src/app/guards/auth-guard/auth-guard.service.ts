@@ -11,10 +11,10 @@ export class AuthGuardService implements CanActivate {
 
   constructor() {
     this.isAuthenticated = true;
-    console.log(`isAuthenticated = ${this.isAuthenticated}`);
+    console.log(`AuthGuard isAuthenticated = ${this.isAuthenticated}`);
   }
 
-  canActivate(): boolean  {
+  canActivate(): boolean {
     return this.isAuthenticated;
   }
 }

@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 import { AboutComponent } from './about/about.component';
 import { ProfileComponent } from './profile/profile.component';
-import { AuthGuardService } from '../guards/auth-guard.service';
+import { AuthGuardService } from '../guards/auth-guard/auth-guard.service';
 
 @NgModule({
   imports: [
