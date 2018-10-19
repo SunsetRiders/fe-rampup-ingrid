@@ -7,6 +7,7 @@ import { AboutModule } from './about/about.module';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AuthGuardService } from './guards/auth-guard.service';
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     SharedModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [ AuthGuardService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
