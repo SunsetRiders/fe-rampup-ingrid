@@ -7,15 +7,14 @@ import { AuthenticateService } from '../../core/services/authenticate/authentica
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent {
-  public authenticatedd: boolean;
+  private authenticated: boolean;
 
-  constructor(authenticatedService: AuthenticateService) {
-    this.authenticatedd = true;
+  constructor(public authenticatedService: AuthenticateService ) {
+    this.authenticated = true;
   }
 
   changeStateAuthenticate() {
-    this.authenticatedd = !this.authenticatedd;
-    console.log(this.authenticatedd);
+    //this.authenticatedService.changeStateAuthenticate(this.authenticated);
   }
 
 }

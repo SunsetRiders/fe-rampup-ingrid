@@ -5,13 +5,18 @@ import { Injectable } from '@angular/core';
 })
 export class AuthenticateService {
 
-  public authenticated: boolean;
+  public authenticateStatus: boolean;
   constructor() {
-    this.authenticated = true;
+    this.authenticateStatus = true;
   }
 
-  public changeStateAuthenticate() {
-    this.authenticated = !this.authenticated;
-    console.log(`AuthenticateService: authenticated = ${this.authenticated}`);
+  public changeStateAuthenticate(autenticate: boolean) {
+    autenticate = !autenticate;
+    console.log(`AuthenticateService: authenticated = ${autenticate}`);
+    this.authenticateStatus = autenticate;
+  }
+
+  statusAuthenticate() {
+    return this.authenticateStatus;
   }
 }
