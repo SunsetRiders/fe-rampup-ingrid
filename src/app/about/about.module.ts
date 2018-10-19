@@ -8,7 +8,7 @@ import { AuthGuardService } from '../guards/auth-guard/auth-guard.service';
 @NgModule({
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
   ],
   exports: [ ],
   declarations: [ ProfileComponent, AboutComponent],

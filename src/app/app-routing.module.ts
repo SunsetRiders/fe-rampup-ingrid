@@ -8,10 +8,10 @@ import { AuthGuardChildService } from './guards/auth-guard-child/auth-guard-chil
 import { AuthGuardLoadService } from './guards/auth-guard-load/auth-guard-load.service';
 
 const routes: Routes = [
-  { path: 'skill', loadChildren: './skill/skill.module#SkillModule', canLoad: [AuthGuardLoadService]},
-  { path: 'contact', loadChildren: './contact/contact.module#ContactModule', canActivateChild: [AuthGuardChildService]},
+  { path: 'skill', loadChildren: './skill/skill.module#SkillModule', canActivate: [AuthGuardService]},
+  { path: 'contact', loadChildren: './contact/contact.module#ContactModule'},
   { path: '', redirectTo: '/about', pathMatch: 'full' },
-  { path: 'about', component: AboutComponent, canActivate: [AuthGuardService] }
+  { path: 'about', component: AboutComponent, }
 ];
 
 @NgModule({
