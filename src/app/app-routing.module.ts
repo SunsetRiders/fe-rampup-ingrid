@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AboutComponent } from './about/about/about.component';
 import { GuardService } from './core/services/guard/guard.service';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found/page-not-found.component';
 
 const routes: Routes = [
   { path: 'skill', loadChildren: './skill/skill.module#SkillModule', canActivate: [GuardService]},
