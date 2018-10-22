@@ -8,10 +8,11 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { AuthGuardService } from './guards/auth-guard/auth-guard.service';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, NotFoundComponent ],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -10,10 +10,10 @@ export class AuthenticateService {
     this.authenticateStatus = true;
   }
 
-  public changeStateAuthenticate(autenticate: boolean) {
+  public changeStateAuthenticate(autenticate: boolean): boolean {
     autenticate = !autenticate;
     console.log(`AuthenticateService: authenticated = ${autenticate}`);
-    this.authenticateStatus = autenticate;
+    return autenticate;
   }
 
   statusAuthenticate() {
