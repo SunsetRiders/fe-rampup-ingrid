@@ -3,9 +3,10 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
 import { AboutComponent } from './about/about/about.component';
+import { GuardService } from './core/services/guard/guard.service';
 
 const routes: Routes = [
-  { path: 'skill', loadChildren: './skill/skill.module#SkillModule'},
+  { path: 'skill', loadChildren: './skill/skill.module#SkillModule', canActivate: [GuardService]},
   { path: 'contact', loadChildren: './contact/contact.module#ContactModule'},
   { path: '', redirectTo: '/about', pathMatch: 'full' },
   { path: 'about', component: AboutComponent }

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { SharedModule } from '../shared/shared.module';
 import { AboutComponent } from './about/about.component';
 import { ProfileComponent } from './profile/profile.component';
+import { GuardService } from '../core/services/guard/guard.service';
 
 @NgModule({
   imports: [
@@ -11,6 +12,6 @@ import { ProfileComponent } from './profile/profile.component';
   ],
   exports: [ ],
   declarations: [ ProfileComponent, AboutComponent],
-  providers: [ ]
+  providers: [ GuardService ]
 })
 export class AboutModule { }
