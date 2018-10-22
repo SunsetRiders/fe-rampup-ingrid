@@ -5,32 +5,34 @@
 
     <span>Feel free to contact me</span>
 
-    <form class="form">
+    <form class="form" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
       <div class="input-container inputcontainer">
-        <input class="input" type="text" name="name">
+        <input class="input" type="text" formControlName="name" required>
         <label class="label">Name</label>
       </div>
+
       <div class="input-container inputcontainer">
-        <input class="input" type="text" name="email">
-        <label class="label">E-mail</label>
+        <input class="input" type="text" formControlName="email" required>
+        <label class="label" >E-mail</label>
       </div>
+
       <div class="input-container inputcontainer">
-        <input class="input" type="text" name="sbject">
+        <input class="input" type="text" formControlName="subject" required>
         <label class="label">Subject</label>
       </div>
+
       <div class="input-container inputcontainer">
-        <input class="input" type="text" name="message">
+        <input class="input" type="text" formControlName="message" required>
         <label class="label">Message</label>
       </div>
+
       <div class="input-container -checkbox">
         <input class="input" type="checkbox">
         <span class="span">I have read the Privacy Policy note.</span>
       </div>
 
+      <button type="submit" class="button" >Send</button>
     </form>
-
-    <button>Send</button>
-
   </div>
   <div class="box second-box">
     <ul class="list">
