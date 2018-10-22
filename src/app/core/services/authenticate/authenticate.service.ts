@@ -18,7 +18,6 @@ export class AuthenticateService {
   }
 
   getStatus(): boolean {
-    console.log(this.authenticated);
-    return true;
+    return this.authenticated;
   }
 }
