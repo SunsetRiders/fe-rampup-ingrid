@@ -7,8 +7,7 @@ import { ContactMeForm } from './contact-me-form';
 export class ContactMeService {
   constructor() { }
 
-  formValue (formInfo: ContactMeForm) {
-    formInfo = formInfo;
+  sendContent (formInfo: ContactMeForm) {
     console.log(formInfo);
   }
 

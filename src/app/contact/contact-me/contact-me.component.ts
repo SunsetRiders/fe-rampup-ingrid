@@ -31,10 +31,6 @@ export class ContactMeComponent {
    }
 
    onSubmit() {
-    this.contactMeService.formValue(this.contactForm.value);
-   }
-
-   showFormValue() {
-    console.log(this.contactForm.value);
+    this.contactMeService.sendContent(this.contactForm.value);
    }
 }
