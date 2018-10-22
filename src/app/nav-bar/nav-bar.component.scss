@@ -1,0 +1,25 @@
+:host {
+  > .div {
+    display: flex;
+  }
+
+  > .div > .login {
+    margin: 10px auto;
+    padding: 10px 25px;
+    background-color: #c5ebb1;
+    border: 1px solid #3d4451;
+    font-family: serif;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  > .div > .logout {
+    margin: 10px auto;
+    padding: 10px 25px;
+    background-color: #ff4d4d;
+    border: 1px solid #3d4451;
+    font-family: serif;
+    font-size: 20px;
+    cursor: pointer;
+  }
+}
