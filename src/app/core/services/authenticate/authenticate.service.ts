@@ -4,14 +4,21 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthenticateService {
+  private authenticated = false;
+  constructor () {}
 
-  constructor() { }
-
-  setTrue() {
-    return true;
+  changeTrue() {
+    this.authenticated = true;
+    console.log(this.authenticated);
   }
 
-  setFalse() {
-    return false;
+  changeFalse() {
+    this.authenticated = false;
+    console.log(this.authenticated);
+  }
+
+  getStatus(): boolean {
+    console.log(this.authenticated);
+    return true;
   }
 }

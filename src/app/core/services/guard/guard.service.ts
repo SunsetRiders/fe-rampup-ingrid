@@ -8,11 +8,12 @@ import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angul
    private isAuthenticated: boolean;
 
    constructor() {
-    this.isAuthenticated = true;
+     this.isAuthenticated = true;
     console.log(`isAuthenticated = ${this.isAuthenticated}`);
   }
 
-   canActivate(): boolean  {
+   canActivate(): boolean {
+
     return this.isAuthenticated;
   }
 }
