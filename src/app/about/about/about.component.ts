@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthenticateService } from 'src/app/core/services/authenticate/authenticate.service';
 
 @Component({
   selector: 'app-about',
@@ -7,13 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AboutComponent {
   private authenticated: boolean;
-  constructor () {}
+
+  constructor (private authenticateService: AuthenticateService) {}
 
   changeTrue() {
-    this.authenticated = true;
+    this.authenticated = this.authenticateService.setTrue();
+
   }
 
   changeFalse() {
-    this.authenticated = false;
+    this.authenticated = this.authenticateService.setFalse();
   }
  }
