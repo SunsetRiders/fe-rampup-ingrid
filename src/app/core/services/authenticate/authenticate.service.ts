@@ -18,7 +18,7 @@ export class AuthenticateService {
   changeFalse() {
     this.authenticated = false;
     console.log(this.authenticated);
-    this.router.navigate(['/page-not-found']);
+    this.router.navigate(['/about']);
   }
 
   getStatus(): boolean {
