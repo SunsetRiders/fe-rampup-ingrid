@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: 'skill', loadChildren: './skill/skill.module#SkillModule', canActivate: [GuardService]},
   { path: 'contact', loadChildren: './contact/contact.module#ContactModule'},
   { path: '', redirectTo: '/about', pathMatch: 'full' },
-  { path: 'about', component: AboutComponent },
+  { path: 'about', component: AboutComponent, resolve: { profile: ProfileInfoResolveService } },
   { path: '**', redirectTo: '/page-not-found', pathMatch: 'full'},
   { path: 'page-not-found', component: PageNotFoundComponent}
 ];
