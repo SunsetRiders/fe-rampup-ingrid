@@ -60,6 +60,7 @@ export class ProfileService {
   }
 
   getUserInfoFromBackEnd(): Observable<ProfileInfo[]> {
-    return of(this.userInfo);
+    const url = 'localhost:3000/profile';
+    return this.http.get(url);
   }
 }
