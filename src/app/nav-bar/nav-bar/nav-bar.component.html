@@ -1,0 +1,4 @@
+<div class="div">
+  <button *ngIf="authenticate.getStatus() === false"class="login" (click)="authenticate.changeTrue()">Login</button>
+  <button *ngIf="authenticate.getStatus()" class="logout" (click)="authenticate.changeFalse()">Logout</button>
+</div>
