@@ -36,7 +36,7 @@
   </div>
   <div class="box second-box">
     <ul class="list">
-      <li *ngFor="let info of info" class="item"><span class="key">{{ isInfoAge(info) ? 'AGE:' : info.name }}</span><span class="value">{{ isInfoAge(info) ? (info.content | age) : info.content }}</span></li>
+      <li *ngFor="let info of profileInfo" class="item"><span class="key">{{ isInfoAge(info) ? 'AGE:' : info?.name }}</span><span class="value">{{ isInfoAge(info) ? (info.content | age) : info?.content }}</span></li>
     </ul>
   </div>
 </div>
