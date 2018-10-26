@@ -5,6 +5,8 @@ import { ProfileInfo } from 'src/app/core/services/profile/profile-info';
 import { ProfileInfoType } from 'src/app/core/services/profile/profile-info-type';
 import { ContactMeService } from '../../core/services/contact-me-form/contact-me.service';
 import { ProfileService } from '../../core/services/profile/profile.service';
+import { HttpClient } from '@angular/common/http';
+
 
 @Component({
   selector: 'app-contact-me',
@@ -25,7 +27,8 @@ export class ContactMeComponent implements OnInit {
     profileService: ProfileService,
     private fb: FormBuilder,
     private contactMeService: ContactMeService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private http: HttpClient
   ) {}
 
   ngOnInit() {
@@ -40,5 +43,15 @@ export class ContactMeComponent implements OnInit {
 
   onSubmit() {
     this.contactMeService.sendContent(this.contactForm.value);
+
+    return console.log(this.http.post('http://localhost:3000/contact', this.contactForm.value)
+    .subscribe(
+      data => {
+        console.log('Post Request is successful ', data);
+      },
+      error => {
+        console.log('Error', error);
+      }
+    ));
   }
 }
