@@ -1,18 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 import { ProfileInfo } from 'src/app/core/services/profile/profile-info';
-import { ProfileService } from '../../core/services/profile/profile.service';
 import { ProfileInfoType } from 'src/app/core/services/profile/profile-info-type';
-import { FormGroup, FormControl, FormBuilder } from '@angular/forms';
-import { Validators } from '@angular/forms';
 import { ContactMeService } from '../../core/services/contact-me-form/contact-me.service';
-
+import { ProfileService } from '../../core/services/profile/profile.service';
 
 @Component({
   selector: 'app-contact-me',
   templateUrl: './contact-me.component.html',
   styleUrls: ['./contact-me.component.scss']
 })
-export class ContactMeComponent {
+export class ContactMeComponent implements OnInit {
   contactForm = this.fb.group({
     name: ['', Validators.required],
     email: ['', Validators.required],
@@ -20,17 +19,26 @@ export class ContactMeComponent {
     message: ['', Validators.required]
   });
 
-  info: ProfileInfo[] = [];
+  profileInfo: ProfileInfo[] = [];
 
-  constructor(profileService: ProfileService, private fb: FormBuilder, private contactMeService: ContactMeService) {
-    this.info = profileService.userInfo;
-   }
+  constructor(
+    profileService: ProfileService,
+    private fb: FormBuilder,
+    private contactMeService: ContactMeService,
+    private route: ActivatedRoute
+  ) {}
 
-   isInfoAge(info: ProfileInfo) {
-     return info.type === ProfileInfoType.Age;
-   }
+  ngOnInit() {
+    this.route.data.subscribe((data: { profile: ProfileInfo[] }) => {
+      this.profileInfo = data.profile;
+    });
+  }
 
-   onSubmit() {
+  isInfoAge(info: ProfileInfo) {
+    return info.type === ProfileInfoType.Age;
+  }
+
+  onSubmit() {
     this.contactMeService.sendContent(this.contactForm.value);
-   }
+  }
 }

@@ -1,3 +1,5 @@
 export enum ProfileInfoType {
-  Default, Age, Calendar
+  Default = 'Default',
+  Age = 'Age',
+  Calendar = 'Calendar'
 }
