@@ -5,6 +5,7 @@ import { ContactMeForm } from './contact-me-form';
   providedIn: 'root'
 })
 export class ContactMeService {
+
   constructor() { }
 
   sendContent (formInfo: ContactMeForm) {
