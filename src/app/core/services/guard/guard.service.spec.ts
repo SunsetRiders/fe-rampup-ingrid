@@ -17,6 +17,7 @@ describe('GuardService', () => {
   let guardService: GuardService;
   let authenticateService: AuthenticateService;
   let router: Router;
+  let guardServiceInstance: GuardService;
   // const testRoutes: Routes = [
   //   {path: '', component: HomeComponent},
   //   {path: 'a', component: AComponent, canActivate: [ GuardService ]},
@@ -38,6 +39,7 @@ describe('GuardService', () => {
     authenticateService = TestBed.get(AuthenticateService);
     guardService = TestBed.get(GuardService);
     router = TestBed.get(Router);
+    guardServiceInstance = new GuardService(authenticateService, router);
   });
 
   it('should be created', () => {
@@ -46,7 +48,6 @@ describe('GuardService', () => {
   });
 
   it('should the method canActivate have been called', () => {
-    // this.authemticateService = false;
     const spy = spyOn(guardService, 'canActivate').and.callThrough();
     guardService.canActivate();
     expect(spy).toHaveBeenCalled();
@@ -62,11 +63,22 @@ describe('GuardService', () => {
     expect(guardService.canActivate()).toBe(false);
   });
 
+  it('should not have been called the method navigate', () => {
+    const spy = spyOn(router, 'navigate');
+    guardServiceInstance.canActivate();
+    expect(spy).not.toHaveBeenCalled();
+  });
+
   it('should have been called the method navigate', () => {
-    const spy = spyOn(router, 'navigate').and.returnValue('/not-found');
+    const spy = spyOn(router, 'navigate');
     authenticateService.changeFalse();
-    let guardServicee = new GuardService(authenticateService, router);
-    guardServicee.canActivate();
+    guardServiceInstance.canActivate();
+    expect(spy).toHaveBeenCalled();
+  });
+
+  it('should have been called the method getStatus', () => {
+    const spy = spyOn(authenticateService, 'getStatus');
+    guardServiceInstance = new GuardService(authenticateService, router);
     expect(spy).toHaveBeenCalled();
   });
 });
