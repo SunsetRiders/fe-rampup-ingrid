@@ -45,12 +45,10 @@ describe('GuardService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should navigate to not-found', () => {
+  it('should the method canActivate have been called', () => {
     // this.authemticateService = false;
     const spy = spyOn(guardService, 'canActivate').and.callThrough();
-
     guardService.canActivate();
-
     expect(spy).toHaveBeenCalled();
   });
 
@@ -59,13 +57,16 @@ describe('GuardService', () => {
     expect(authenticateService.getStatus()).toBe(false);
   });
 
-  // it('should return not found in router navigate', () => {
-  //   const spy = spyOn(router, 'navigate').and.returnValue(true);
-  //   expect(router.navigate([])).toBe(true);
-  // });
-
-  it('should navigate to not-found', () => {
+  it('should when the method canActivate return false', () => {
     const spy = spyOn(guardService, 'canActivate').and.returnValue(false);
-    expect();
+    expect(guardService.canActivate()).toBe(false);
+  });
+
+  it('should have been called the method navigate', () => {
+    const spy = spyOn(router, 'navigate').and.returnValue('/not-found');
+    authenticateService.changeFalse();
+    let guardServicee = new GuardService(authenticateService, router);
+    guardServicee.canActivate();
+    expect(spy).toHaveBeenCalled();
   });
 });
