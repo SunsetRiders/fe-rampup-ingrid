@@ -18,7 +18,8 @@ describe('ContactMeComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ ContactMeComponent, AgePipe],
-      imports: [ ReactiveFormsModule, FormsModule, HttpClientTestingModule, RouterTestingModule ]
+      imports: [ ReactiveFormsModule, FormsModule, HttpClientTestingModule, RouterTestingModule ],
+      providers: [ ContactMeComponent ]
     })
     .compileComponents();
   }));
@@ -34,14 +35,23 @@ describe('ContactMeComponent', () => {
     pipe = new AgePipe();
   });
 
+  // afterAll(() => {
+  //   this.fixture.destroy();
+  //   this.component.destroy();
+  //   this.de.destroy();
+  //   this.el.destroy();
+  // });
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should set submitted to true', () => {
-    component.onSubmit();
-    // expect(component.onsubmitted).toBeTruthy();
-  });
+  // it('should set submitted to true', () => {
+  //   const contactMecomponent: ContactMeComponent = TestBed.get(ContactMeComponent);
+  //   const spy = spyOn(contactMecomponent, 'onSubmit');
+  //   contactMecomponent.onSubmit();
+  //   expect(component.onSubmit()).toBeTruthy();
+  // });
 
   it('should form be invalid because have 4 fields setValue (none)', () => {
     component.contactForm.controls['name'].setValue('');

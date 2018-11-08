@@ -12,4 +12,11 @@ describe('ProfileInfoResolveService', () => {
     const service: ProfileInfoResolveService = TestBed.get(ProfileInfoResolveService);
     expect(service).toBeTruthy();
   });
+
+  it('should be called the method resolve', () => {
+    const profileInfoResolveService = TestBed.get(ProfileInfoResolveService);
+    const spy = spyOn(profileInfoResolveService, 'resolve');
+    profileInfoResolveService.resolve();
+    expect(spy).toHaveBeenCalled();
+  });
 });

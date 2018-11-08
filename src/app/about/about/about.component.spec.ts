@@ -23,6 +23,10 @@ describe('AboutComponent', () => {
     fixture.detectChanges();
   });
 
+  // afterEach(() => {
+  //   this.fixture.destroy();
+  // });
+
   it('should create', () => {
     expect(component).toBeTruthy();
   });
