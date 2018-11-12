@@ -9,11 +9,10 @@ import { AuthenticateService } from '../authenticate/authenticate.service';
    private isAuthenticated: boolean;
 
    constructor(private authemticateService: AuthenticateService, private router: Router) {
-    this.isAuthenticated = this.authemticateService.getStatus();
   }
 
    canActivate(): boolean {
-    console.log(`isAuthenticated = ${this.isAuthenticated}`);
+    this.isAuthenticated = this.authemticateService.getStatus();
 
      if (this.isAuthenticated) {
       return this.isAuthenticated;

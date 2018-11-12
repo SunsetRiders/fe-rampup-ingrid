@@ -35,23 +35,9 @@ describe('ContactMeComponent', () => {
     pipe = new AgePipe();
   });
 
-  // afterAll(() => {
-  //   this.fixture.destroy();
-  //   this.component.destroy();
-  //   this.de.destroy();
-  //   this.el.destroy();
-  // });
-
   it('should create', () => {
     expect(component).toBeTruthy();
   });
-
-  // it('should set submitted to true', () => {
-  //   const contactMecomponent: ContactMeComponent = TestBed.get(ContactMeComponent);
-  //   const spy = spyOn(contactMecomponent, 'onSubmit');
-  //   contactMecomponent.onSubmit();
-  //   expect(component.onSubmit()).toBeTruthy();
-  // });
 
   it('should form be invalid because have 4 fields setValue (none)', () => {
     component.contactForm.controls['name'].setValue('');
@@ -101,8 +87,12 @@ describe('ContactMeComponent', () => {
     expect(component.contactForm.valid).toBeFalsy();
   });
 
-  it('should pipe transform the birthday in age', () => {
-    const age = pipe.transform('21/12/1996');
-    expect(age >= 21);
+  it('should form be valid', () => {
+    component.contactForm.controls['name'].setValue('ingrid');
+    component.contactForm.controls['email'].setValue('ingrid@d.com');
+    component.contactForm.controls['subject'].setValue('oii');
+    component.contactForm.controls['message'].setValue('ddd');
+    expect(component.contactForm.valid).toBe(true);
   });
+
 });

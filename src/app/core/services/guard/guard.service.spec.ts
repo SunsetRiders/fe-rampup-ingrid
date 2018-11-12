@@ -18,14 +18,8 @@ describe('GuardService', () => {
   let authenticateService: AuthenticateService;
   let router: Router;
   let guardServiceInstance: GuardService;
-  // const testRoutes: Routes = [
-  //   {path: '', component: HomeComponent},
-  //   {path: 'a', component: AComponent, canActivate: [ GuardService ]},
-  //   {path: '**', component: NotFoundComponent}
-  // ];
 
   beforeEach(() => TestBed.configureTestingModule({
-    // imports: [ RouterTestingModule.withRoutes( testRoutes )],
     providers: [
       AuthenticateService,
       {
@@ -78,7 +72,7 @@ describe('GuardService', () => {
 
   it('should have been called the method getStatus', () => {
     const spy = spyOn(authenticateService, 'getStatus');
-    guardServiceInstance = new GuardService(authenticateService, router);
+    guardService.canActivate();
     expect(spy).toHaveBeenCalled();
   });
 });

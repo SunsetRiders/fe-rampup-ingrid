@@ -22,7 +22,4 @@ describe('ProfessionalSkillsComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should span Professional Skills', () => {
-    expect();
-  });
 });

@@ -41,13 +41,13 @@ describe('AuthenticateService', () => {
     expect(service);
   });
 
-  it('should have been called the method navigate', () => {
+  it('should have been called the method navigate in the method valueTrue', () => {
     const spy = spyOn(router, 'navigate');
     authenticateService.changeTrue();
     expect(spy).toHaveBeenCalled();
   });
 
-  it('should have been called the method navigate', () => {
+  it('should have been called the method navigate in the method valueFalse', () => {
     const spy = spyOn(router, 'navigate');
     authenticateService.changeFalse();
     expect(spy).toHaveBeenCalled();
