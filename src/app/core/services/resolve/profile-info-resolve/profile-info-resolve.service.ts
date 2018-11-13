@@ -11,7 +11,7 @@ export class ProfileInfoResolveService implements Resolve<ProfileInfo[]> {
 
   constructor(private profileService: ProfileService) { }
 
-  resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<ProfileInfo[]> {
+  resolve(): Observable<ProfileInfo[]> {
     return this.profileService.getUserInfoFromBackEnd();
   }
 }

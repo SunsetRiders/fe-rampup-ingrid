@@ -21,4 +21,5 @@ describe('ProfessionalSkillsComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
 });
