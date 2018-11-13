@@ -34,7 +34,7 @@ describe('ProfileService', () => {
   });
 
   it('should be call the method http get', () => {
-    const spy = spyOn(http, 'get');
+    const spy = spyOn(<any>http, 'get');
     const profileInfo = profileService.getUserInfoFromBackEnd();
     expect(spy).not.toHaveBeenCalled();
   });
